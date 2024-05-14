@@ -1,5 +1,8 @@
 package com.lfthread
-
+import android.os.Handler;
+import android.os.Looper;
+import java.lang.Runnable
+import android.os.Run
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.annotations.ReactModule
 
@@ -17,7 +20,7 @@ class LFThreadModule(reactContext: ReactApplicationContext) :
     return a * b
   }
 
-  override fun asyncFn(fn: any，onFinshed: any): void {
+  override fun asyncFn(fn: any,onFinshed: any): void {
       val handler = Handler(Looper.prepare())
       val runnable = Runnable {
           // 这里是你的异步代码
