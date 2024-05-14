@@ -4,9 +4,18 @@ Asynchronous Threading Tool Library for react-native
 
 ## Installation
 
+### Via npm
+
 ```sh
 npm install react-native-lf-thread
 ```
+
+### Via yarn
+
+```sh
+yarn add react-native-lf-thread
+```
+
 
 ## Usage
 
