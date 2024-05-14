@@ -12,11 +12,19 @@ npm install react-native-lf-thread
 
 
 ```js
-import { multiply } from 'react-native-lf-thread';
+import { asyncFn } from 'react-native-lf-thread';
 
 // ...
+const bigDataComputing = (params) => {
+  // ... do some heavy computing
+  const results =  doSomething(params);
+  return results;
+}
 
-const result = multiply(3, 7);
+ asyncFn(bigDataComputing, (results)=>{
+   // Synchronizing data to the UI
+   console.log(results);
+ });
 ```
 
 ## Contributing
